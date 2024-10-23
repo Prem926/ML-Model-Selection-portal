@@ -1,0 +1,210 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Styles */
+.container {
+    margin: 50px auto;
+    width: 60%;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+/* Feature 1: Container Animation on Hover */
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Title Styling */
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s;
+}
+
+/* Form Labels */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Inputs, Select, and Button Styling */
+input, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Feature 2: Button Hover Animation */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Disabled Button Styling */
+button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    margin-left: 5px;
+    color: #888;
+    font-size: 0.8rem;
+    cursor: help;
+}
+
+/* Loading Container */
+.loading-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Feature 3: Pulsing Loading Text */
+.loading-text {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1.2s infinite;
+}
+
+/* FontAwesome Spinner */
+.fa-spinner {
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 20px;
+    position: relative;
+}
+
+/* Feature 4: Gradient Progress Bar with Animation */
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    animation: progress 5s infinite;
+}
+
+/* Output Section */
+#output {
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Feature 5: Fade-in Animation for Output */
+#output.visible {
+    opacity: 1;
+}
+
+/* Image Styling */
+#confMatrix, #treeContainer img {
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature 6: Confusion Matrix Zoom on Hover */
+#confMatrix:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* H3 Headings */
+h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    animation: slideIn 1s;
+}
+
+/* Feature 7: Toast Notification Styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s;
+}
+
+/* Toast Error Variant */
+.toast.error {
+    background-color: #FF6347;
+}
+
+/* Toast Fade Out */
+.toast.fadeOut {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
